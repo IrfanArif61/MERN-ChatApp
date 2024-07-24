@@ -27,7 +27,7 @@ const signup = async (req, res) => {
       username,
       password,
       gender,
-      profilePic: gender === "Male" ? boyProfilePic : girlProfilePic,
+      profilePic: gender === "male" ? boyProfilePic : girlProfilePic,
     });
     if (newUser) {
       const token = await newUser.generateAccessToken();
@@ -60,18 +60,22 @@ const signup = async (req, res) => {
 const login = async (req, res) => {
   try {
     const { username, password } = req.body;
+    if (!username || !password) {
+      return res
+        .status(400)
+        .json({ message: "Username and password are required" });
+    }
 
     const user = await User.findOne({ username });
 
-    if (!user) {
-      return res.status(400).json({ message: "User does not exists" });
-    }
-
-    const isPasswordCorrect = await user.isPasswordCorrect(password);
-
-    if (!isPasswordCorrect) {
+    if (!user || !(await user.isPasswordCorrect(password))) {
       return res.status(400).json({ message: "Invalid username or password" });
     }
+    // const isPasswordCorrect = await user.isPasswordCorrect(password);
+
+    // if (!user || !isPasswordCorrect) {
+    //   return res.status(400).json({ message: "Invalid username or password" });
+    // }
 
     const token = await user.generateAccessToken();
 

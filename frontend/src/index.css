@@ -3,7 +3,19 @@
 @tailwind utilities;
 
 body{
-    background: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url("/bg2.jpg");
+    /* background: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url("/bg2.jpg"); */
+	
+	/* background: linear-gradient(to right, #0f0c29, #302b63, #24243e); */
+	/* background: linear-gradient(to right, #000000, #2d2828, #000000); */
+	background: linear-gradient(to bottom, #0f0c29, #131333, #19183e, #1f1e49, #262354, #272555, #292657, #2a2858, #27264f, #242447, #21213e, #1f1f36);
+
+	/* background: linear-gradient(to bottom, #221e44, #1f1b40, #1c183c, #191638, #161334, #151233, #131132, #121031, #121132, #121233, #131235, #131336); */
+	/* background-image: linear-gradient(to right, #1a134b, #161246, #131140, #100f3b, #0e0d36, #0e0d36, #0e0d36, #0e0d36, #100f3b, #131140, #161246, #1a134b); */
+
+	/* background-image: linear-gradient(to right, #130e3b, #110e39, #100d37, #0e0c34, #0d0b32, #0d0b32, #0d0b32, #0d0b32, #0e0c34, #100d37, #110e39, #130e3b); */
+	/* #171145 */
+
+	
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
