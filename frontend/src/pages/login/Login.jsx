@@ -11,21 +11,25 @@ const Login = () => {
     e.preventDefault();
     const res = await login(username, password);
     if (res.success) {
-      // Navigate or handle successful login here
+      // TODO:  Navigate or handle successful login here
     }
   };
 
   return (
     <div className="flex flex-col items-center justify-center min-w-96 mx-auto">
-      <div className="w-full p-6 rounded-lg shadow-md bg-white-700 bg-clip-padding backdrop-filter backdrop-blur-lg bg-opacity-0">
-        <h1 className="text-3xl font-semibold text-center text-[#EEEEEE]">
-          Login <span className="text-[#222831] font-bold"> BitChat</span>
+      <div className="w-full p-6 rounded-lg shadow-md bg-white-700 bg-clip-padding backdrop-filter backdrop-blur-lg bg-opacity-0border-gray-50 border-2">
+        <h1 className="text-3xl font-bold text-center text-[#EEEEEE]">
+          BitChat
         </h1>
+
+        <div className="flex w-full flex-col">
+          <div className="divider"></div>
+        </div>
 
         <form onSubmit={handleSubmit}>
           <div>
             <label className="label p-2">
-              <span className="text-base label-text text-[#393E46]">
+              <span className="text-base label-text text-[#c9b5b5]">
                 Username
               </span>
             </label>
@@ -40,7 +44,7 @@ const Login = () => {
 
           <div>
             <label className="label">
-              <span className="text-base label-text text-[#393E46]">
+              <span className="text-base label-text text-[#c9b5b5]">
                 Password
               </span>
             </label>
@@ -55,7 +59,7 @@ const Login = () => {
 
           <a
             href="#"
-            className="text-sm text-[#393E46] flex items-center justify-center hover:underline hover:text-[#020304] mt-2"
+            className="text-sm  flex items-center justify-center   mt-2 text-[#c9b5b5] hover:underline hover:text-[#e3dada]"
           >
             Forget your password?
           </a>
@@ -74,7 +78,7 @@ const Login = () => {
 
           <Link
             to={"/signup"}
-            className="text-sm text-[#393E46] flex items-center justify-center hover:underline hover:text-[#020304] mt-2"
+            className="text-sm  flex items-center justify-center mt-2 text-[#c9b5b5] hover:underline hover:text-[#e3dada]"
           >
             {"Don't"} have an account?
           </Link>

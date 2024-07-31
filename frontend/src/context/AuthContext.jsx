@@ -2,8 +2,7 @@ import { createContext, useContext, useState } from "react";
 
 export const AuthContext = createContext();
 
-//useContext(AuthContext): This hook allows any component to subscribe to the AuthContext. It simplifies the consumption of the context by returning the context value directly.
-
+//  allows any component to subscribe to the AuthContext.
 export const useAuthContext = () => {
   return useContext(AuthContext);
 };

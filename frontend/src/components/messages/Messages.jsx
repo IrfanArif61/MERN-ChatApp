@@ -1,4 +1,5 @@
 import useGetMessages from "../../hooks/useGetMessages";
+import useListenMessages from "../../hooks/useListenMessages";
 import MessageSkeleton from "../skeletons/MessageSkeleton";
 import Message from "./Message";
 import { useEffect, useRef } from "react";
@@ -6,6 +7,8 @@ import { useEffect, useRef } from "react";
 const Messages = () => {
   const { messages, loading } = useGetMessages();
   const messagesContainerRef = useRef(null); // Ref for the messages container
+
+  useListenMessages();
 
   // Update scroll position on changes to messages or loading state
   useEffect(() => {
