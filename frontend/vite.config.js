@@ -9,7 +9,7 @@ export default defineConfig({
     port: 3000,
     proxy: {
       "/api": {
-        target: "https://bitchat-app.vercel.app",
+        target: "http://localhost:5000",
         // changeOrigin: true,
         changeOrigin: true,
         secure: false,

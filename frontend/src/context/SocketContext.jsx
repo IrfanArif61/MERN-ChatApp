@@ -15,7 +15,7 @@ export const SocketContextProvider = ({ children }) => {
 
   useEffect(() => {
     if (authUser) {
-      const newSocket = io("https://bitchat-app.vercel.app", {
+      const newSocket = io("http://localhost:5000", {
         query: {
           userId: authUser._id,
         },

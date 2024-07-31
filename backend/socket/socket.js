@@ -9,7 +9,7 @@ const server = http.createServer(app);
 
 const io = new Server(server, {
   cors: {
-    origin: ["https://bitchat-app.vercel.app/"], // Ensure this matches your client-side origin
+    origin: ["http://localhost:3000"], // Ensure this matches your client-side origin
     methods: ["GET", "POST"],
   },
 });
